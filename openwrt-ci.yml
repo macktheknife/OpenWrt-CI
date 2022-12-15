@@ -76,6 +76,95 @@ jobs:
           CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
           CONFIG_KERNEL_BUILD_DOMAIN="Azure"
+          CONFIG_TARGET_bcm53xx=y
+          CONFIG_TARGET_bcm53xx_DEVICE_netgear-r7000=y
+          CONFIG_TARGET_BOARD="bcm53xx"
+
+          #Packages
+          CONFIG_LIBCURL_COOKIES=y
+          CONFIG_LIBCURL_FILE=y
+          CONFIG_LIBCURL_FTP=y
+          CONFIG_LIBCURL_HTTP=y
+          CONFIG_LIBCURL_NO_SMB="!"
+          CONFIG_LIBCURL_OPENSSL=y
+          CONFIG_LIBCURL_PROXY=y
+          CONFIG_PACKAGE_automount=y
+          CONFIG_PACKAGE_bash=y
+          CONFIG_PACKAGE_ca-bundle=y
+          CONFIG_PACKAGE_coreutils-nohup=y
+          CONFIG_PACKAGE_curl=y
+          CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+          CONFIG_PACKAGE_iptables-mod-ipopt=y
+          CONFIG_PACKAGE_kmod-crypto-crc32c=y
+          CONFIG_PACKAGE_kmod-fs-exfat=y
+          CONFIG_PACKAGE_kmod-fs-ext4=y
+          CONFIG_PACKAGE_kmod-fs-vfat=y
+          CONFIG_PACKAGE_kmod-fuse=y
+          CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+          CONFIG_PACKAGE_kmod-ipt-ipopt=y
+          CONFIG_PACKAGE_kmod-lib-crc16=y
+          CONFIG_PACKAGE_kmod-nls-cp437=y
+          CONFIG_PACKAGE_kmod-nls-iso8859-1=y
+          CONFIG_PACKAGE_kmod-nls-utf8=y
+          CONFIG_PACKAGE_kmod-scsi-core=y
+          CONFIG_PACKAGE_kmod-usb-storage=y
+          CONFIG_PACKAGE_kmod-usb-storage-extras=y
+          CONFIG_PACKAGE_kmod-usb-storage-uas=y
+          CONFIG_PACKAGE_libcurl=y
+          CONFIG_PACKAGE_libncurses=y
+          CONFIG_PACKAGE_libreadline=y
+          CONFIG_PACKAGE_luci-app-mwan3=y
+          CONFIG_PACKAGE_luci-app-mwan3helper=y
+          CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=y
+          CONFIG_PACKAGE_mwan3=y
+          CONFIG_PACKAGE_ntfs-3g=y
+          CONFIG_PACKAGE_terminfo=y
+          CONFIG_PACKAGE_luci-app-zerotier=y
+          CONFIG_LUCI_LANG_zh_Hans=y
+
+
+          CONFIG_PACKAGE_luci-app-passwall=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_socks=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_socks=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun=y
+          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=y
+
+
+          # IPv6 support
+          CONFIG_PACKAGE_6in4=y
+          CONFIG_PACKAGE_6to4=y
+          CONFIG_PACKAGE_6rd=y
+          CONFIG_PACKAGE_ip6tables=y
+          CONFIG_PACKAGE_odhcpd=y
+          CONFIG_PACKAGE_odhcp6c=y
+          #CONFIG_PACKAGE_odhcpd-ipv6only=y
+          CONFIG_PACKAGE_luci-proto-ipv6=y
+          CONFIG_PACKAGE_luci-proto-ppp=y
+
+          # IPv6 NAT support (ip6tables NAT extensions, ipt-nat6 and nf-nat6 kmods)
+          CONFIG_PACKAGE_ip6tables-mod-nat=y
+
+          # 设置dnsmasq
+
+          # CONFIG_PACKAGE_dnsmasq is not set
+          CONFIG_PACKAGE_dnsmasq-full=y
+          CONFIG_PACKAGE_dnsmasq_full_auth=y
+          CONFIG_PACKAGE_dnsmasq_full_conntrack=y
+          CONFIG_PACKAGE_dnsmasq_full_dhcp=y
+          CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+          CONFIG_PACKAGE_dnsmasq_full_dnssec=y
+          CONFIG_PACKAGE_dnsmasq_full_ipset=y
+          CONFIG_PACKAGE_dnsmasq_full_noid=y
+          CONFIG_PACKAGE_dnsmasq_full_tftp=y
+
+          # Theme
+          CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-argonv3=y          
           EOF
 
           #
